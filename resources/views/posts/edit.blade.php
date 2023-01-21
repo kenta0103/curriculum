@@ -1,10 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog</title>
-    </head>
-    <body>
+<x-app-layout>
+    <x-slot name="header">
+        　（ヘッダー名）
+    </x-slot>
+   (各ブレードファイルの中身)
         <h1>Blog Name</h1>
         <form action="/posts/{{ $post->id }}" method="POST">
             @csrf
@@ -24,5 +22,4 @@
         <div class='footer'>
             <a href="/posts/{{ $post->id }}">戻る</a>
         </div>
-    </body>
-</html>
+</x-app-layout>
